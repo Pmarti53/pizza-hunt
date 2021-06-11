@@ -49,7 +49,7 @@ const commentController = {
         Comment.findOneAndUpdate(
             { _id: params.commentId },
             { $push: { replies: body } },
-            { new: true }
+            { new: true, runValidators: true }
         )
             .then(dbPizzaData => {
                 if (!dbPizzaData) {
@@ -68,8 +68,8 @@ const commentController = {
             { $pull: { replies: { replyId: params.replyId } } },
             { new: true }
         )
-        .then(dbPizzaData => res.json(dbPizzaData))
-        .catch( err => res.json(err));
+            .then(dbPizzaData => res.json(dbPizzaData))
+            .catch(err => res.json(err));
     }
 
 };
