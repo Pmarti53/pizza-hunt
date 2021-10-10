@@ -13,6 +13,11 @@ Follow this link https://github.com/Pmarti53/pizza-hunt and clone the code. From
 
 
 ## Technologies Used
+* Mongoose ODM
+* MongoDB
+* Node.js
+* IndexedDB
+
 
 ## Github
 Pmarti53
